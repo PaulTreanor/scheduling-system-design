@@ -7,7 +7,7 @@ This document outlines the system design of an scheduling system for a medical c
 - The platform should scale to support many doctors and patients without degrading performance. 
 
 # 2. High level architecture diagram
-![[appointment-scheduling-system-architecture.png]]
+![System architecture diagram](appointment-scheduling-system-architecture.png)
 Some notes on the architecture: 
 1. Doctors, admin staff, and patients all use a single React SPA. After login, the SPA reads the user’s Cognito user group and routes them to the appropriate area of the app (patient, doctor, or admin). The React Native mobile app and the web app share a single repository and reuse core domain logic (types, API clients, validation,  etc), while keeping platform-specific UI components separate.
 2. Amazon Aurora PostgreSQL will have read replicas across multiple AZs for scaling reads and having improved resilience. Core API lambdas use RDS Proxy to manage DB connection pooling. 

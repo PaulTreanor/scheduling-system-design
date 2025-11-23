@@ -1,3 +1,5 @@
+# System Design - Appointment Scheduling System
+
 # 1. Intro 
 This document outlines the system design of an scheduling system for a medical clinic. The system lets patients view available appointment times, make bookings without specifying a doctor, and receive confirmations and reminders. It also allows doctors and admins to manage availability and schedules. The system design covers the core system architecture, the data model, as well as operational considerations to ensure the system is reliable, secure, and scalable.
 ## Assumptions
